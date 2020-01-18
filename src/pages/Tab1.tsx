@@ -78,11 +78,33 @@ const slideCard = {
 const Tab1: React.FC = () => {
  const [showModal, setShowModal] = useState(false);
  const [slider, setSlider] = useState([]);
+ const [feature, setFeature] = useState([]);
+ const [last, setLast] = useState([]);
 
  useEffect(() => {
   const fecthData = async () => {
    const result = await axios("./api-slider.json");
    setSlider(result.data.data);
+   console.log(result.data.data);
+  };
+
+  fecthData();
+ }, []);
+
+ useEffect(() => {
+  const fecthData = async () => {
+   const result = await axios("./api-featured-product.json");
+   setFeature(result.data.data);
+   console.log(result.data.data);
+  };
+
+  fecthData();
+ }, []);
+
+ useEffect(() => {
+  const fecthData = async () => {
+   const result = await axios("./api-last-purchased.json");
+   setLast(result.data.data);
    console.log(result.data.data);
   };
 
@@ -639,7 +661,7 @@ const Tab1: React.FC = () => {
     )} */}
 
     <div className='scrollable'>
-     {ApiFeature.data.map((item, index) => (
+     {feature.map((item, index) => (
       <div style={{paddingBottom: "10px"}}>
        <IonCard
         style={{
@@ -709,7 +731,7 @@ const Tab1: React.FC = () => {
     </div>
 
     <div className='scrollable'>
-     {LastPurch.data.map((item, index) => (
+     {last.map((item, index) => (
       <div style={{paddingBottom: "10px"}}>
        <IonCard
         style={{
@@ -779,7 +801,7 @@ const Tab1: React.FC = () => {
     </div>
 
     <div className='scrollable'>
-     {LastPurch.data.map((item, index) => (
+     {last.map((item, index) => (
       <div style={{paddingBottom: "10px"}}>
        <IonCard
         style={{
