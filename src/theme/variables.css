@@ -76,7 +76,7 @@ http://ionicframework.com/docs/theming/ */
  --ion-color-light-tint: #f5f6f9;
 
  --ion-color-background: #f9ddd1;
- --ion-color-background-contrast: #ffffff;
+ --ion-color-background-contrast: #000000;
 }
 
 .ion-color-background {

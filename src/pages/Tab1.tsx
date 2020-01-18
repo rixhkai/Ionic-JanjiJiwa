@@ -42,7 +42,8 @@ import {
  add,
  close,
  checkbox,
- remove
+ remove,
+ heart
 } from "ionicons/icons";
 import React, {Component} from "react";
 import axios from "axios";
@@ -347,7 +348,7 @@ const Tab1: React.FC = () => {
           />
          </div>
          <IonText style={{paddingLeft: "10px"}} className='menuText'>
-          Cincau
+          Coffee Jelly
          </IonText>
         </div>
         <IonText slot='end' style={{paddingTop: "1px"}} className='textPrice'>
@@ -372,11 +373,11 @@ const Tab1: React.FC = () => {
           />
          </div>
          <IonText style={{paddingLeft: "10px"}} className='menuText'>
-          Cincau
+          Extra Espresso
          </IonText>
         </div>
         <IonText slot='end' style={{paddingTop: "1px"}} className='textPrice'>
-         +3.000
+         +5.000
         </IonText>
        </IonItem>
 
@@ -392,16 +393,15 @@ const Tab1: React.FC = () => {
             marginBottom: "1px",
             width: "15px"
            }}
-           checked={true}
            color='dark'
           />
          </div>
          <IonText style={{paddingLeft: "10px"}} className='menuText'>
-          Cincau
+          Vanilla Ice Cream
          </IonText>
         </div>
         <IonText slot='end' style={{paddingTop: "1px"}} className='textPrice'>
-         +3.000
+         +8.000
         </IonText>
        </IonItem>
 
@@ -417,16 +417,15 @@ const Tab1: React.FC = () => {
             marginBottom: "1px",
             width: "15px"
            }}
-           checked={true}
            color='dark'
           />
          </div>
          <IonText style={{paddingLeft: "10px"}} className='menuText'>
-          Cincau
+          Matcha Ice Cream
          </IonText>
         </div>
         <IonText slot='end' style={{paddingTop: "1px"}} className='textPrice'>
-         +3.000
+         +8.000
         </IonText>
        </IonItem>
 
@@ -442,16 +441,15 @@ const Tab1: React.FC = () => {
             marginBottom: "1px",
             width: "15px"
            }}
-           checked={true}
            color='dark'
           />
          </div>
          <IonText style={{paddingLeft: "10px"}} className='menuText'>
-          Cincau
+          Chocolate Ice Cream
          </IonText>
         </div>
         <IonText slot='end' style={{paddingTop: "1px"}} className='textPrice'>
-         +3.000
+         +8.000
         </IonText>
        </IonItem>
 
@@ -721,7 +719,7 @@ const Tab1: React.FC = () => {
      <IonText
       style={{
        alignSelf: "flex-end",
-       paddingRight: "10px",
+       paddingRight: "20px",
        fontSize: "13px",
        color: "grey"
       }}
@@ -760,7 +758,7 @@ const Tab1: React.FC = () => {
           <IonText>Rp {formatter.format(parseInt(item.price))}</IonText>
          </div>
          <IonButtons style={{paddingRight: "10px"}}>
-          <IonIcon slot='icon-only' icon={heartEmpty} />
+          <IonIcon slot='icon-only' icon={heart} />
          </IonButtons>
         </div>
        </IonCard>
@@ -791,7 +789,7 @@ const Tab1: React.FC = () => {
      <IonText
       style={{
        alignSelf: "flex-end",
-       paddingRight: "10px",
+       paddingRight: "20px",
        fontSize: "13px",
        color: "grey"
       }}
@@ -801,55 +799,43 @@ const Tab1: React.FC = () => {
     </div>
 
     <div className='scrollable'>
-     {last.map((item, index) => (
-      <div style={{paddingBottom: "10px"}}>
-       <IonCard
+     <div style={{paddingBottom: "10px"}}>
+      <IonCard
+       style={{
+        height: "270px",
+        width: "180px",
+        borderRadius: "18px"
+       }}
+      >
+       <img
+        style={{height: "200px"}}
+        src='https://b.zmtcdn.com/data/pictures/chains/1/18731481/d60a7f41de179c18cbec5e9250c9d322.jpg'
+       />
+       <div
         style={{
-         height: "265px",
-         width: "180px",
-         borderRadius: "18px",
-         marginBottom: "-20px"
+         paddingLeft: "15px",
+         paddingTop: "10px",
+         display: "block",
+         justifyContent: "space-between"
         }}
        >
-        <img style={{height: "200px"}} src={item.img} />
-        <div
+        <IonText
+         text-wrap='true'
          style={{
-          paddingLeft: "15px",
-          paddingTop: "10px",
-          display: "flex",
-          justifyContent: "space-between"
+          color: "#393939",
+          fontWeight: "bold",
+          fontSize: "12px"
          }}
         >
-         <div>
-          <IonText
-           style={{color: "#393939", fontWeight: "100px", fontSize: "15px"}}
-          >
-           {item.name}
-          </IonText>
-          <br />
-          <IonText>Rp {formatter.format(parseInt(item.price))}</IonText>
-         </div>
-         <IonButtons style={{paddingRight: "10px"}}>
-          <IonIcon slot='icon-only' icon={heartEmpty} />
-         </IonButtons>
-        </div>
-       </IonCard>
-       <IonButton
-        className='round'
-        color='dark'
-        size='small'
-        onClick={() => setShowModal(true)}
-        style={{
-         paddingLeft: "1px",
-         height: "35px",
-         alignSelf: "flex-end",
-         marginLeft: "130px"
-        }}
-       >
-        <IonIcon slot='icon-only' icon={add} />
-       </IonButton>
-      </div>
-     ))}
+         Lorem Ipsum Dolor Sit Amet, In Commune
+        </IonText>
+        <br />
+        <IonText style={{color: "grey", paddingTop: "1px"}}>
+         Rp 1hr ago{" "}
+        </IonText>
+       </div>
+      </IonCard>
+     </div>
     </div>
    </IonContent>
   </IonPage>

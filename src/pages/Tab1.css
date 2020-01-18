@@ -181,5 +181,6 @@ div.scrollable div {
 
 .modals {
  margin-top: 60px;
- border-radius: 35px;
+ border-top-left-radius: 35px;
+ border-top-right-radius: 35px;
 }
