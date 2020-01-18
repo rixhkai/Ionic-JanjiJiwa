@@ -178,3 +178,8 @@ div.scrollable div {
 .bolds {
  font-weight: bold;
 }
+
+.modals {
+ margin-top: 60px;
+ border-radius: 35px;
+}

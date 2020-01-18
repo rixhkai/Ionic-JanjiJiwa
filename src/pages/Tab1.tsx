@@ -224,7 +224,7 @@ const Tab1: React.FC = () => {
      </IonButton>
     </section>
 
-    <IonModal isOpen={showModal}>
+    <IonModal cssClass='modals' isOpen={showModal}>
      <IonContent>
       <IonList lines='none'>
        <IonRow
