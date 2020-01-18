@@ -1,0 +1,10 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "JJ-RA",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {},
+  "server": {
+  }
+}
